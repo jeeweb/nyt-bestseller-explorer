@@ -4,7 +4,7 @@ export default function About() {
   return (
     <>
       <h2 className={styles.pageTitle}>About Us</h2>
-      <p>
+      <p className={styles.aboutSection}>
         Welcome to the official explorer for The New York Times Best Seller list
         explorer.
         <br />
