@@ -1,7 +1,8 @@
 import Footer from "../components/footer";
 import Header from "../components/header";
-import "../styles/global.css";
 import { Metadata } from "next";
+import "../styles/global.css";
+import "../styles/common.css";
 
 export const metadata: Metadata = {
   title: {
@@ -24,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <div>{children}</div>
         <Footer />
       </body>
     </html>

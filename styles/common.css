@@ -1,0 +1,7 @@
+body {
+  background: #faf9f8;
+}
+body > header + div {
+  padding: 36px 36px 0 244px;
+  min-height: 100vh;
+}
