@@ -31,3 +31,14 @@
 .nav .nav__on:after {
   animation: stretchWidth 0.4s 0.2s ease forwards;
 }
+
+@media screen and (max-width: 1024px) {
+  @keyframes stretchWidth {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 36px;
+    }
+  }
+}

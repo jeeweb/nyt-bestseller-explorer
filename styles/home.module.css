@@ -111,3 +111,15 @@
 .categoryItem:hover a span:before {
   width: 4px;
 }
+
+@media screen and (max-width: 1170px) {
+  .pageTitle span {
+    font-size: 5em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pageTitle span {
+    font-size: 4em;
+  }
+}

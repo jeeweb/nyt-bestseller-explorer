@@ -24,3 +24,15 @@
   font-size: 1.4em;
   line-height: 1.4;
 }
+
+@media screen and (max-width: 1170px) {
+  .pageTitle {
+    font-size: 5em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .pageTitle {
+    font-size: 4em;
+  }
+}
