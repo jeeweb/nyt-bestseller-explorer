@@ -8,26 +8,30 @@ async function getCategories() {
 
 export default async function HomePage() {
   const categories = await getCategories();
-  //console.log(categories);
+  // console.log(categories);
   return (
     <div className={styles.container}>
       <h1 className={styles.pageTitle}>
-        The New York Times
-        <br />
-        Best Seller Explorer
+        <span>The New York Times</span>
+        <span>Best Seller Explorer</span>
       </h1>
-      <section>
-        <ul>
-          {categories.results.map((category) => {
-            return (
-              <li key={category.list_name_encoded}>
-                <Link href={`/list/${category.list_name_encoded}`}>
-                  {category.display_name}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      <section className={styles.homeSection}>
+        <div className={styles.scrollWrap}>
+          <ul className={styles.categoryList}>
+            {categories.results.map((category) => {
+              return (
+                <li
+                  key={category.list_name_encoded}
+                  className={styles.categoryItem}
+                >
+                  <Link href={`/list/${category.list_name_encoded}`}>
+                    <span>{category.display_name}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
       </section>
     </div>
   );
