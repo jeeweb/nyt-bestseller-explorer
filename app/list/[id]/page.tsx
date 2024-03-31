@@ -45,7 +45,7 @@ export default async function BookList({ params: { id } }: IParams) {
                       target="_blank"
                       className={styles.purchaseButton}
                     >
-                      Buy
+                      <span>Buy</span>
                     </Link>
                   </div>
                 </li>
