@@ -25,25 +25,35 @@ export default async function BookList({ params: { id } }: IParams) {
   return (
     <div className={styles.container}>
       <h2 className={styles.categoryTitle}>{booklist.results.list_name}</h2>
-      <ul>
-        {booklist.results.books.map((book) => {
-          return (
-            <li key={book.primary_isbn10}>
-              <img
-                src={book.book_image}
-                alt={`${book.title} by ${book.author}`}
-              />
-              <div>
-                <p>{book.title}</p>
-                <span>{book.author}</span>
-              </div>
-              <Link href={book.amazon_product_url} target="_blank">
-                Buy
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <section className={styles.detailSection}>
+        <div className={styles.scrollWrap}>
+          <ul className={styles.bookList}>
+            {booklist.results.books.map((book) => {
+              return (
+                <li key={book.primary_isbn10} className={styles.bookItem}>
+                  <div className={styles.imgBox}>
+                    <img
+                      src={book.book_image}
+                      alt={`${book.title} by ${book.author}`}
+                    />
+                  </div>
+                  <div className={styles.bookInfo}>
+                    <p className={styles.bookTitle}>{book.title}</p>
+                    <span className={styles.bookAuthor}>{book.author}</span>
+                    <Link
+                      href={book.amazon_product_url}
+                      target="_blank"
+                      className={styles.purchaseButton}
+                    >
+                      Buy
+                    </Link>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
