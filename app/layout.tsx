@@ -20,7 +20,6 @@ export const metadata: Metadata = {
 export const roboto = Roboto({
   subsets: ["latin"],
   weight: ["100", "400", "700"],
-  variable: "--roboto",
 });
 
 export default function RootLayout({
@@ -30,7 +29,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.variable}>
+      <body className={roboto.className}>
         <Header />
         <div>{children}</div>
         <Footer />
