@@ -1,0 +1,20 @@
+.nav {
+  padding: 0 36px;
+  width: 100vw;
+}
+.nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav li {
+}
+
+.nav li a {
+  display: block;
+  padding: 16px 0;
+}
+.nav .nav__on {
+  color: orange;
+}
