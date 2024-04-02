@@ -49,7 +49,7 @@
 .scrollWrap:before {
   content: "";
   position: fixed;
-  width: calc(50vw);
+  width: calc(100vw - 244px - 36px - 10px);
   height: 1.9em;
   background: linear-gradient(
     to bottom,
@@ -121,5 +121,8 @@
 @media screen and (max-width: 1024px) {
   .pageTitle span {
     font-size: 4em;
+  }
+  .scrollWrap:before {
+    width: calc(100vw - 172px - 36px - 10px);
   }
 }

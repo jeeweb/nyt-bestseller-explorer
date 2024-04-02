@@ -21,7 +21,7 @@ export async function generateMetadata({ params: { id } }) {
 
 export default async function BookList({ params: { id } }: IParams) {
   const booklist = await getBookList(id);
-  console.log(booklist.results.books);
+  console.log(booklist.results);
   return (
     <div className={styles.container}>
       <h2 className={styles.categoryTitle}>{booklist.results.list_name}</h2>
@@ -45,7 +45,7 @@ export default async function BookList({ params: { id } }: IParams) {
                       target="_blank"
                       className={styles.purchaseButton}
                     >
-                      <span>Buy</span>
+                      <span>Buy Now</span>
                     </Link>
                   </div>
                 </li>
